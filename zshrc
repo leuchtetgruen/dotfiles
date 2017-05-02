@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -30,7 +30,7 @@ DISABLE_LS_COLORS="true"
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -45,7 +45,7 @@ DISABLE_LS_COLORS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew colored-man web-search themes autojump)
+plugins=(git bundler osx rake ruby rvm mvn brew colored-man web-search themes autojump zsh-autosuggestions)
 
 # autojmp
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
@@ -71,10 +71,10 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 alias tmux="TERM=screen-256color-bce tmux"
-export PATH="/usr/local/bin:/usr/local/sbin:":$PATH:"/Applications/android/sdk/platform-tools/:/Applications/android/sdk/tools:/Applications/android/sdk/build-tools/android-4.4"
+export PATH=$PATH:":/usr/local/bin:/usr/local/sbin:/Applications/android/sdk/platform-tools/:/Applications/android/sdk/tools:/Applications/android/sdk/build-tools/android-4.4"
 
 setopt PROMPT_SUBST
-export RPROMPT="%n@%m %T (`unread_mails`)"
+export RPROMPT="%n@%m %T"
 
 alias mw="mutt -F ~/.mutt/work"
 alias mp="mutt -F ~/.mutt/privat"
@@ -82,3 +82,17 @@ alias mi="mutt -F ~/.mutt/info"
 alias resource="source ~/.zshrc"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PASSWORDFILE=~/Dropbox/passwords.json
+
+
+#export TERM=xterm-256color
+#if [[ -r ~/Library/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+	#source ~/Library/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#fi
+
+
+export MSF_DATABASE_CONFIG=/opt/msf/database.yml
+export PATH=$PATH:/opt/msf
+export NODE_PATH=./node_modules:.
+
+source $HOME/.rvm/scripts/rvm
