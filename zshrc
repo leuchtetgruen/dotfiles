@@ -81,6 +81,11 @@ alias mp="mutt -F ~/.mutt/privat"
 alias mi="mutt -F ~/.mutt/info"
 alias resource="source ~/.zshrc"
 
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
+
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PASSWORDFILE=~/Dropbox/passwords.json
 
