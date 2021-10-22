@@ -1,3 +1,6 @@
 [submodule "vim"]
 	path = vim
 	url = git@github.com:leuchtetgruen/neovim.config.git
+[submodule "smyck"]
+	path = smyck
+	url = https://github.com/hukl/Smyck-Color-Scheme
