@@ -1,3 +1,3 @@
 [submodule "vim"]
 	path = vim
-	url = https://github.com/leuchtetgruen/vim-config
+	url = git@github.com:leuchtetgruen/neovim.config.git
