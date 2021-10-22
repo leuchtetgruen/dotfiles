@@ -1,6 +1,9 @@
 After initializing & updating all the submodules (dont forget the submodules in the vim-folder) create symlinks:
 
 mkdir -p ~/.config/nvim
+mkdir -p ~/.config/nvim/plugs
 ln -s ~/dotfiles/vim/init.vim ~/.config/nvim/init.vim
+ln -s ~/dotfiles/vim/autoload ~/.config/nvim/autoload
 ln -s ~/dotfiles/zshrc ~/.zshrc
 
+Once you start the neovim editor run :PlugInstall to install plugins
